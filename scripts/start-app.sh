@@ -9,12 +9,11 @@ git pull origin main
 
 # Shut down existing containers and volumes
 echo "🧹 Cleaning up existing Docker containers and volumes..."
-docker compose down -v
+docker-compose down -v
 
 # Rebuild and restart containers
 echo "🔧 Rebuilding and starting containers..."
 docker-compose up --build -d
-
 
 # Wait for backend to start
 echo "⏳ Waiting for backend to become healthy..."
